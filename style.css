@@ -1,16 +1,18 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-    --primary-color: #14b8a6;        /* Teal/Cyan - main accent color */
-    --secondary-color: #0d9488;      /* Darker teal */
-    --accent-color: #2dd4bf;         /* Light teal/cyan */
-    --text-dark: #0f172a;            /* Very dark blue-gray */
-    --text-light: #64748b;           /* Slate gray */
-    --bg-light: #f1f5f9;             /* Light gray-blue */
-    --bg-white: #ffffff;
-    --border-color: #cbd5e1;         /* Slate border */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --primary-color: #2563eb;        /* Blue - main accent color */
+    --secondary-color: #1e40af;      /* Darker blue */
+    --accent-color: #3b82f6;         /* Light blue */
+    --text-dark: #e2e8f0;            /* Light gray for text on dark bg */
+    --text-light: #94a3b8;           /* Medium gray for secondary text */
+    --bg-dark: #0f172a;              /* Very dark blue-gray background */
+    --bg-gray: #1e293b;              /* Dark gray for cards/sections */
+    --bg-light: #334155;             /* Lighter gray for hover states */
+    --bg-white: #1e293b;             /* Dark gray (replacing white) */
+    --border-color: #334155;         /* Gray border */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
     --transition: all 0.3s ease;
 }
 
@@ -29,7 +31,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--bg-white);
+    background-color: var(--bg-dark);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,10 +55,11 @@ a:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--bg-white);
+    background: var(--bg-gray);
     box-shadow: var(--shadow-md);
     z-index: 1000;
     transition: var(--transition);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {
@@ -163,7 +166,7 @@ a:hover {
     height: auto;
     border-radius: 50%;
     box-shadow: var(--shadow-lg);
-    border: 8px solid var(--bg-light);
+    border: 8px solid var(--bg-gray);
 }
 
 /* ===== BUTTONS ===== */
@@ -223,7 +226,7 @@ a:hover {
 }
 
 .bg-light {
-    background: var(--bg-light);
+    background: var(--bg-gray);
 }
 
 .container {
@@ -287,6 +290,7 @@ a:hover {
     border-radius: 0.5rem;
     font-size: 0.95rem;
     border-left: 3px solid var(--primary-color);
+    color: var(--text-dark);
 }
 
 .about-sidebar {
@@ -296,7 +300,7 @@ a:hover {
 }
 
 .info-card {
-    background: var(--bg-white);
+    background: var(--bg-gray);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-md);
@@ -392,7 +396,7 @@ a:hover {
     height: 2rem;
     background: var(--primary-color);
     border-radius: 50%;
-    border: 4px solid var(--bg-light);
+    border: 4px solid var(--bg-dark);
 }
 
 .timeline-content h3 {
@@ -409,7 +413,7 @@ a:hover {
 }
 
 .project {
-    background: var(--bg-white);
+    background: var(--bg-gray);
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
@@ -450,7 +454,7 @@ a:hover {
 }
 
 .research-philosophy {
-    background: var(--bg-white);
+    background: var(--bg-gray);
     padding: 2rem;
     border-radius: 0.5rem;
     border-left: 4px solid var(--primary-color);
@@ -490,7 +494,7 @@ a:hover {
     display: flex;
     gap: 2rem;
     padding: 1.5rem;
-    background: var(--bg-white);
+    background: var(--bg-gray);
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid var(--border-color);
@@ -561,7 +565,7 @@ a:hover {
 }
 
 .skill-category {
-    background: var(--bg-white);
+    background: var(--bg-gray);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-sm);
@@ -605,7 +609,7 @@ a:hover {
 
 /* ===== AWARDS SECTION ===== */
 .awards-section {
-    background: var(--bg-white);
+    background: var(--bg-gray);
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-sm);
@@ -706,7 +710,7 @@ a:hover {
 
 /* ===== FOOTER ===== */
 footer {
-    background: var(--text-dark);
+    background: #0a0f1e;
     color: white;
     text-align: center;
     padding: 2rem;
