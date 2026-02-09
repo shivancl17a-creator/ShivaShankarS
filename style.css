@@ -1,15 +1,20 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-    --primary-color: #2563eb;        /* Blue - main accent color */
-    --secondary-color: #1e40af;      /* Darker blue */
-    --accent-color: #3b82f6;         /* Light blue */
-    --text-dark: #e2e8f0;            /* Light gray for text on dark bg */
-    --text-light: #94a3b8;           /* Medium gray for secondary text */
-    --bg-dark: #0f172a;              /* Very dark blue-gray background */
-    --bg-gray: #1e293b;              /* Dark gray for cards/sections */
-    --bg-light: #334155;             /* Lighter gray for hover states */
-    --bg-white: #1e293b;             /* Dark gray (replacing white) */
-    --border-color: #334155;         /* Gray border */
+    --primary-color: #ff6b35;        /* Coral Orange - main accent color */
+    --secondary-color: #e85d2a;      /* Darker orange for hover */
+    --accent-color: #ff7f50;         /* Lighter coral for special accents */
+    --text-white: #ffffff;           /* Pure white for headers */
+    --text-light: #c5c8cd;           /* Light gray for subheaders */
+    --text-medium: #9ea3ab;          /* Medium gray for body text */
+    --text-dark: #a8adb5;            /* Light gray (for compatibility) */
+    --bg-darkest: #1f2226;           /* Darkest charcoal */
+    --bg-dark: #25272c;              /* Dark charcoal - navbar */
+    --bg-main: #2b2d33;              /* Main charcoal background */
+    --bg-gray: #2b2d33;              /* Same as main (replacing old var) */
+    --bg-light: #3a3d42;             /* Medium dark for cards/buttons */
+    --bg-white: #2b2d33;             /* Dark background (replacing white) */
+    --border-color: #3d4047;         /* Gray border */
+    --icon-gray: #5a5d62;            /* Social icons gray */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
@@ -30,14 +35,15 @@ html {
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--bg-dark);
+    color: var(--text-medium);
+    background-color: var(--bg-main);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
+    color: var(--text-white);
 }
 
 a {
@@ -55,11 +61,11 @@ a:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--bg-gray);
+    background: var(--bg-dark);
     box-shadow: var(--shadow-md);
     z-index: 1000;
     transition: var(--transition);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .nav-container {
@@ -74,7 +80,7 @@ a:hover {
 .logo {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-white);
     letter-spacing: 0.5px;
 }
 
@@ -107,7 +113,13 @@ a:hover {
     transition: var(--transition);
 }
 
-.nav-menu a:hover::after {
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
     width: 100%;
 }
 
@@ -129,7 +141,7 @@ a:hover {
 }
 
 .hero-subtitle {
-    color: var(--primary-color);
+    color: var(--text-light);
     font-weight: 600;
     font-size: 0.95rem;
     text-transform: uppercase;
@@ -140,14 +152,14 @@ a:hover {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-white);
     margin-bottom: 1rem;
     line-height: 1.1;
 }
 
 .hero-description {
     font-size: 1.25rem;
-    color: var(--text-light);
+    color: var(--text-medium);
     margin-bottom: 2rem;
 }
 
@@ -166,7 +178,7 @@ a:hover {
     height: auto;
     border-radius: 50%;
     box-shadow: var(--shadow-lg);
-    border: 8px solid var(--bg-gray);
+    border: 6px solid var(--primary-color);
 }
 
 /* ===== BUTTONS ===== */
@@ -183,7 +195,8 @@ a:hover {
 
 .btn-primary {
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-dark);
+    font-weight: 700;
 }
 
 .btn-primary:hover {
@@ -193,14 +206,15 @@ a:hover {
 }
 
 .btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    background: var(--bg-light);
+    color: var(--text-white);
+    border-color: transparent;
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
-    color: white;
+    background: var(--bg-light);
+    border-color: var(--primary-color);
+    color: var(--text-white);
 }
 
 .btn-outline {
@@ -226,7 +240,7 @@ a:hover {
 }
 
 .bg-light {
-    background: var(--bg-gray);
+    background: var(--bg-darkest);
 }
 
 .container {
@@ -238,7 +252,7 @@ a:hover {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--text-dark);
+    color: var(--text-white);
     position: relative;
     padding-bottom: 1rem;
 }
@@ -264,7 +278,7 @@ a:hover {
 
 .about-main p {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: var(--text-medium);
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
@@ -276,6 +290,7 @@ a:hover {
 .research-interests h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--text-white);
 }
 
 .interests-grid {
@@ -290,7 +305,7 @@ a:hover {
     border-radius: 0.5rem;
     font-size: 0.95rem;
     border-left: 3px solid var(--primary-color);
-    color: var(--text-dark);
+    color: var(--text-medium);
 }
 
 .about-sidebar {
@@ -300,7 +315,7 @@ a:hover {
 }
 
 .info-card {
-    background: var(--bg-gray);
+    background: var(--bg-light);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-md);
@@ -310,7 +325,7 @@ a:hover {
 .info-card h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: var(--text-white);
 }
 
 .info-list {
@@ -321,6 +336,7 @@ a:hover {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--border-color);
     font-size: 0.95rem;
+    color: var(--text-medium);
 }
 
 .info-list li:last-child {
@@ -328,7 +344,7 @@ a:hover {
 }
 
 .info-list strong {
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .education-item {
@@ -341,12 +357,12 @@ a:hover {
 
 .education-item h4 {
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--text-white);
     margin-bottom: 0.25rem;
 }
 
 .institution {
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 0.95rem;
     margin-bottom: 0.25rem;
 }
@@ -359,7 +375,7 @@ a:hover {
 
 .thesis {
     font-size: 0.9rem;
-    color: var(--text-light);
+    color: var(--text-medium);
     margin-top: 0.5rem;
 }
 
@@ -396,24 +412,24 @@ a:hover {
     height: 2rem;
     background: var(--primary-color);
     border-radius: 50%;
-    border: 4px solid var(--bg-dark);
+    border: 4px solid var(--bg-main);
 }
 
 .timeline-content h3 {
     font-size: 1.75rem;
-    color: var(--text-dark);
+    color: var(--text-white);
     margin-bottom: 0.5rem;
 }
 
 .timeline-content h4 {
     font-size: 1.1rem;
-    color: var(--primary-color);
+    color: var(--text-light);
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
 
 .project {
-    background: var(--bg-gray);
+    background: var(--bg-light);
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
@@ -423,12 +439,12 @@ a:hover {
 
 .project h5 {
     font-size: 1.25rem;
-    color: var(--text-dark);
+    color: var(--text-white);
     margin-bottom: 1rem;
 }
 
 .project p {
-    color: var(--text-light);
+    color: var(--text-medium);
     margin-bottom: 1rem;
     line-height: 1.7;
 }
@@ -442,7 +458,7 @@ a:hover {
     padding-left: 1.5rem;
     position: relative;
     margin-bottom: 0.5rem;
-    color: var(--text-light);
+    color: var(--text-medium);
 }
 
 .achievements li::before {
@@ -454,7 +470,7 @@ a:hover {
 }
 
 .research-philosophy {
-    background: var(--bg-gray);
+    background: var(--bg-light);
     padding: 2rem;
     border-radius: 0.5rem;
     border-left: 4px solid var(--primary-color);
@@ -464,10 +480,11 @@ a:hover {
 .research-philosophy h3 {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
+    color: var(--text-white);
 }
 
 .research-philosophy p {
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
@@ -481,12 +498,12 @@ a:hover {
 .pub-category h3 {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: var(--text-white);
 }
 
 .pub-category .note {
     font-style: italic;
-    color: var(--text-light);
+    color: var(--text-medium);
     margin-bottom: 1.5rem;
 }
 
@@ -494,7 +511,7 @@ a:hover {
     display: flex;
     gap: 2rem;
     padding: 1.5rem;
-    background: var(--bg-gray);
+    background: var(--bg-light);
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid var(--border-color);
@@ -523,22 +540,22 @@ a:hover {
 
 .pub-details h4 {
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--text-white);
     margin-bottom: 0.5rem;
 }
 
 .authors {
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
 
 .authors strong {
-    color: var(--text-dark);
+    color: var(--text-light);
 }
 
 .journal {
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 0.9rem;
     font-style: italic;
 }
@@ -565,7 +582,7 @@ a:hover {
 }
 
 .skill-category {
-    background: var(--bg-gray);
+    background: var(--bg-light);
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-sm);
@@ -575,7 +592,7 @@ a:hover {
 .skill-category h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: var(--text-white);
 }
 
 .skill-tags {
@@ -585,31 +602,32 @@ a:hover {
 }
 
 .skill-tag {
-    background: var(--bg-light);
+    background: var(--bg-dark);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     font-size: 0.85rem;
-    color: var(--text-dark);
+    color: var(--text-medium);
     border: 1px solid var(--border-color);
     transition: var(--transition);
 }
 
 .skill-tag:hover {
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-dark);
     border-color: var(--primary-color);
+    font-weight: 600;
 }
 
 .skill-tag.highlight {
     background: var(--primary-color);
-    color: white;
+    color: var(--bg-dark);
     border-color: var(--primary-color);
     font-weight: 600;
 }
 
 /* ===== AWARDS SECTION ===== */
 .awards-section {
-    background: var(--bg-gray);
+    background: var(--bg-light);
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-sm);
@@ -619,6 +637,7 @@ a:hover {
 .awards-section h3 {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
+    color: var(--text-white);
 }
 
 .awards-list {
@@ -632,7 +651,7 @@ a:hover {
     gap: 2rem;
     padding: 1rem;
     border-left: 3px solid var(--primary-color);
-    background: var(--bg-light);
+    background: var(--bg-dark);
     border-radius: 0.25rem;
 }
 
@@ -645,12 +664,12 @@ a:hover {
 
 .award-details h4 {
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--text-white);
     margin-bottom: 0.25rem;
 }
 
 .award-details p {
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 0.95rem;
 }
 
@@ -665,10 +684,11 @@ a:hover {
 .contact-text h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
+    color: var(--text-white);
 }
 
 .contact-text p {
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1rem;
@@ -681,7 +701,7 @@ a:hover {
 }
 
 .contact-item {
-    background: var(--bg-light);
+    background: var(--bg-dark);
     padding: 1.5rem;
     border-radius: 0.5rem;
     border-left: 3px solid var(--primary-color);
@@ -689,12 +709,12 @@ a:hover {
 
 .contact-item h4 {
     font-size: 1rem;
-    color: var(--text-dark);
+    color: var(--text-white);
     margin-bottom: 0.5rem;
 }
 
 .contact-item p {
-    color: var(--text-light);
+    color: var(--text-medium);
     font-size: 0.95rem;
 }
 
@@ -710,10 +730,11 @@ a:hover {
 
 /* ===== FOOTER ===== */
 footer {
-    background: #0a0f1e;
-    color: white;
+    background: var(--bg-darkest);
+    color: var(--text-medium);
     text-align: center;
     padding: 2rem;
+    border-top: 2px solid var(--primary-color);
 }
 
 footer p {
