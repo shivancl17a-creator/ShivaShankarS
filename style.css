@@ -1,13 +1,13 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    --primary-color: #14b8a6;        /* Teal/Cyan - main accent color */
+    --secondary-color: #0d9488;      /* Darker teal */
+    --accent-color: #2dd4bf;         /* Light teal/cyan */
+    --text-dark: #0f172a;            /* Very dark blue-gray */
+    --text-light: #64748b;           /* Slate gray */
+    --bg-light: #f1f5f9;             /* Light gray-blue */
     --bg-white: #ffffff;
-    --border-color: #e5e7eb;
+    --border-color: #cbd5e1;         /* Slate border */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
