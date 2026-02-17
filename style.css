@@ -163,6 +163,31 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
+/* ---- QUOTE (new) ---- */
+.hero-quote {
+    border-left: 3px solid var(--primary-color);
+    padding: 0.6rem 1rem;
+    margin: 1.25rem 0 1.5rem;
+    background: var(--bg-light);
+    border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.hero-quote p {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+    line-height: 1.6;
+}
+
+.hero-quote cite {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-style: normal;
+}
+/* -------------------- */
+
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -170,7 +195,7 @@ a:hover {
 }
 
 .hero-image {
-    flex: 0 0 220px;
+    flex: 0 0 280px; /* ← changed from 220px */
 }
 
 .hero-image img {
@@ -180,7 +205,6 @@ a:hover {
     box-shadow: var(--shadow-lg);
     border: 5px solid var(--primary-color);
 }
-
 /* ===== BUTTONS ===== */
 .btn {
     display: inline-block;
