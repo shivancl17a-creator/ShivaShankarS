@@ -151,9 +151,8 @@ body::before {
 /* ===== HERO ===== */
 /* ===== PAGE WRAPPER ===== */
 .page-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    width: 100%;
+    padding: 0 1.75rem;
 }
 
 /* ===== HERO ===== */
@@ -165,10 +164,11 @@ body::before {
     position: relative;
     border: 1px solid var(--border);
     border-radius: 1.1rem;
-    padding: 2.5rem 2.5rem 2.25rem;
+    padding: 2.5rem 3rem 2.25rem;
     background: var(--bg-card);
     box-shadow: var(--shadow-lg);
     overflow: visible;
+    width: 100%;
     animation: fadeInUp .75s ease-out both;
 }
 .hero-panel:hover {
@@ -272,7 +272,7 @@ body::before {
 
 /* ===== SECTIONS ===== */
 /* .section and .bg-alt defined in panel section below */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.container { width: 100%; padding: 0 2rem; }
 
 /* ===== SECTION TITLE WITH OUTLINE CIRCLE ICON ===== */
 .section-title-wrap {
@@ -604,7 +604,7 @@ footer a:hover { color: var(--primary); }
     .about-content { grid-template-columns: 1fr; }
     .interests-grid { grid-template-columns: 1fr; }
     .section-title-wrap { flex-direction: row; gap: 1rem; }
-    .page-container { padding: 0 1.25rem; }
+    .page-container { padding: 0 1rem; }
 }
 @media (max-width: 640px) {
     .nav-menu { display: none; }
@@ -629,8 +629,9 @@ footer a:hover { color: var(--primary); }
     position: relative;
     border: 1px solid var(--border);
     border-radius: 1.1rem;
-    padding: 3rem 2.5rem 2.5rem;
+    padding: 3rem 3rem 2.75rem;
     background: var(--bg-card);
+    width: 100%;
     transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 .section-panel:hover {
@@ -693,5 +694,5 @@ footer a:hover { color: var(--primary); }
 }
 
 /* ===== PAGE RHYTHM — gap between panels ===== */
-.section { padding: 2.5rem 0; }
-.bg-alt { background: var(--bg-darkest); padding: 2.5rem 0; }
+.section { padding: 1.5rem 0; }
+.bg-alt { background: var(--bg-darkest); padding: 1.5rem 0; }
