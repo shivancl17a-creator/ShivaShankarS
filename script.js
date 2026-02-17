@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.08 });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal-panel').forEach(el => revealObserver.observe(el));
 
     // ── Scroll to top button ──────────────────
     const scrollTopBtn = document.getElementById('scrollTop');
