@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Encode+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- ===== NAVBAR ===== -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">SHIVA SHANKAR S., PHD</a>
+            <a href="#home" class="logo">SHIVA<span> SHANKAR</span></a>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -23,18 +25,39 @@
                 <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ===== HERO ===== -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <p class="hero-subtitle">Protein Engineering & Protein Design</p>
-            <h1 class="hero-title">Shiva Shankar S., Ph.D.</h1>
-            <p class="hero-description">Molecular Biology | Proteomics | Computational Structure Prediction</p>
+            <span class="hero-eyebrow">
+                <i class="fas fa-flask"></i>
+                Protein Engineer &amp; Structural Biologist
+            </span>
+            <h1 class="hero-title">Shiva Shankar S.,<br><span class="accent">Ph.D.</span></h1>
+            <p class="hero-tagline">
+                Structural Biology<span class="sep">·</span>Mass Spectrometry Proteomics<span class="sep">·</span>Computational Design
+            </p>
             <div class="hero-buttons">
-                <a href="#research" class="btn btn-primary">View Research</a>
-                <a href="Shiva_Shankar_CV.pdf" class="btn btn-secondary" download>Download CV</a>
+                <a href="#research" class="btn btn-primary"><i class="fas fa-microscope"></i> View Research</a>
+                <a href="Shiva_Shankar_CV.pdf" class="btn btn-secondary" download><i class="fas fa-download"></i> Download CV</a>
             </div>
         </div>
         <div class="hero-image">
@@ -42,50 +65,52 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===== ABOUT ===== -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title reveal">About Me</h2>
             <div class="about-content">
                 <div class="about-main">
-                    <p>I am a protein biochemist with a passion for solving complex molecular challenges through interdisciplinary approaches. My research integrates cutting-edge proteomics, protein engineering, and computational modeling to understand protein function and develop therapeutic solutions.</p>
-                    
-                    <p>During my Ph.D. at CSIR-National Chemical Laboratory, I pioneered novel approaches in protein engineering, successfully transforming insoluble proteins into functional variants and co-inventing a patented glycation-resistant insulin therapeutic. My work bridges fundamental structural biology with translational applications in medicine.</p>
+                    <p class="reveal">I am a protein biochemist and structural biologist with deep expertise in protein engineering, protein design, and mass spectrometry-based proteomics. Over 7+ years of doctoral and pre-doctoral research, I have developed a strong command of both experimental and computational approaches — from recombinant expression and biophysical characterization to cross-linking mass spectrometry, DIA/SWATH proteomics, and computational structure prediction using AlphaFold2 and inverse folding tools.</p>
 
-                    <div class="research-interests">
+                    <p class="reveal reveal-delay-1">A defining theme of my research has been tackling difficult proteins: using structural insight and computational design to transform insoluble targets into functional, soluble variants, and building targeted proteomics workflows to interrogate post-translational modifications at the molecular level. This work culminated in co-inventing a <strong>patented glycation-resistant insulin therapeutic (WO 2024/194897 A1)</strong>, combining protein engineering with detailed mass spectrometric characterization.</p>
+
+                    <p class="reveal reveal-delay-2">My structural biology foundation — built through crystallography training at CSIR-NCL and IISER-Pune and deepened through computational structure prediction — informs how I approach protein engineering problems: structure first, then design. I am passionate about merging this structural perspective with modern proteomics to understand how proteins are modified, how they interact, and how they can be redesigned for biomedical applications.</p>
+
+                    <div class="research-interests reveal reveal-delay-3">
                         <h3>Research Interests</h3>
                         <div class="interests-grid">
-                            <div class="interest-item">Protein Engineering & Design</div>
-                            <div class="interest-item">Mass spectrometry proteomics</div>
-                            <div class="interest-item">Computational Modeling (AlphaFold2)</div>
+                            <div class="interest-item">Protein Engineering &amp; De Novo Design</div>
+                            <div class="interest-item">Structural Biology &amp; Crystallography</div>
+                            <div class="interest-item">Mass Spectrometry Proteomics (XL-MS, DIA/SWATH, PRM)</div>
+                            <div class="interest-item">Computational Structure Prediction (AlphaFold2)</div>
+                            <div class="interest-item">Inverse Folding &amp; Sequence Design (ProteinMPNN)</div>
                             <div class="interest-item">Therapeutic Protein Development</div>
-                            <div class="interest-item">Mass Spectrometry Workflows</div>
-                            <div class="interest-item">Protein Modifications</div>
                         </div>
                     </div>
-
-                    <a href="Shiva_Shankar_CV.pdf" class="btn btn-outline" download>View Full CV</a>
+                    <a href="Shiva_Shankar_CV.pdf" class="btn btn-outline reveal" download><i class="fas fa-file-alt"></i> View Full CV</a>
                 </div>
 
                 <div class="about-sidebar">
-                    <div class="info-card">
+                    <div class="info-card reveal">
                         <h3>Personal Info</h3>
                         <ul class="info-list">
-                            <li><strong>Email:</strong> bio.shankar@gmail.com</li>
+                            <li><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#35575c5a1b465d545b5e5447755258545c591b565a58"><span class="__cf_email__" data-cfemail="9cfef5f3b2eff4fdf2f7fdeedcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span></a></li>
                             <li><strong>Location:</strong> Baltimore, MD, USA</li>
                             <li><strong>Phone:</strong> +1 410-419-4603</li>
-                            <li><strong>ORCID:</strong> <a href="https://orcid.org/0000-0002-7289-0896" target="_blank">View Profile</a></li>
-                            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shiva-shankar-s-sss" target="_blank">Connect</a></li>
+                            <li><strong>ORCID:</strong> <a href="https://orcid.org/0000-0002-7289-0896" target="_blank" rel="noopener">0000-0002-7289-0896</a></li>
+                            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shiva-shankar-s-sss" target="_blank" rel="noopener">shiva-shankar-s-sss</a></li>
                         </ul>
                     </div>
 
-                    <div class="info-card">
+                    <div class="info-card reveal reveal-delay-1">
                         <h3>Education</h3>
                         <div class="education-item">
                             <h4>Ph.D. in Biological Sciences</h4>
                             <p class="institution">CSIR-National Chemical Laboratory, Pune, India</p>
-                            <p class="date">2017 - 2025</p>
+                            <p class="date">July 2017 – December 2025</p>
                             <p class="thesis"><em>Thesis: Structural and functional characterization of Meteorin and Meteorin-like proteins</em></p>
+                            <p class="thesis">Advisor: Dr. Mahesh Kulkarni</p>
                         </div>
                         <div class="education-item">
                             <h4>M.Sc. in Biotechnology</h4>
@@ -103,203 +128,218 @@
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="section bg-light">
+    <!-- ===== RESEARCH ===== -->
+    <section id="research" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title">Research Narrative</h2>
-            
+            <h2 class="section-title reveal">Research Narrative</h2>
+
             <div class="research-timeline">
-                <div class="timeline-item">
+
+                <div class="timeline-item reveal">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Ph.D. Research (2017-2024)</h3>
+                        <h3>Senior Research Fellow / Ph.D. (2017–2025)</h3>
                         <h4>CSIR-National Chemical Laboratory, Pune</h4>
-                        
+
                         <div class="project">
                             <h5>Meteorin and Meteorin-like Protein Characterization</h5>
-                            <p>Conducted comprehensive structural and functional analysis of Meteorin family proteins in cellular metabolism. Utilized AlphaFold2 for de novo structure prediction to identify functional receptor-binding regions and disease-associated missense variants. Integrated cross-linking mass spectrometry (XL-MS) with computational modeling to elucidate protein-protein interaction networks.</p>
+                            <p>Conducted comprehensive structural and functional analysis of Meteorin family proteins in cellular metabolism. Utilized AlphaFold2/ColabFold for de novo structure prediction to identify functional receptor-binding regions and disease-associated missense variants. Developed a targeted proteomics assay (DIA/SWATH and PRM) for Metrnl quantification in biological samples. Integrated cross-linking mass spectrometry (XL-MS) with computational modeling to elucidate protein–protein interaction networks, and applied inverse folding (ProteinMPNN) to successfully design soluble variants of mouse Meteorin-like protein.</p>
                             <ul class="achievements">
-                                <li>First to solve structural features using computational prediction</li>
-                                <li>Developed targeted proteomics assays for Metrnl detection</li>
-                                <li>Applied inverse folding to design soluble functional variants</li>
+                                <li>First structural characterization of Meteorin family proteins via computational prediction</li>
+                                <li>Developed targeted proteomics workflows for Metrnl detection and quantification</li>
+                                <li>Applied inverse folding design to rescue solubility and restore functional activity</li>
                             </ul>
                         </div>
+
                         <div class="project">
                             <h5>Glycation-Resistant Insulin Development</h5>
-                            <p>Engineered a novel glycation-resistant insulin proteoform by integrating de novo solubility-tag design with inverse folding approaches (ProteinMPNN). This work addresses a critical challenge in diabetes therapy - insulin degradation through non-enzymatic glycation. Successfully transformed an insoluble protein into a functional therapeutic candidate, resulting in a <strong>patent (WO 2024/194897 A1)</strong>.</p>
+                            <p>Engineered a novel glycation-resistant insulin proteoform by combining de novo solubility-tag design with inverse folding strategies. Developed an original in vitro glycation workflow and characterized modification profiles by both bottom-up and top-down mass spectrometry. This translational protein engineering effort addressed a clinically meaningful challenge in diabetes therapy and resulted in a co-invented <strong>patent (WO 2024/194897 A1)</strong>.</p>
                             <ul class="achievements">
-                                <li>Developed novel invitro workflow for studying insulin glycation mechanisms</li>
-                                <li>Optimized expression systems achieving significant yield improvements</li>
-                                <li>Characterized modifications using top-down mass spectrometry</li>
+                                <li>Designed novel in vitro workflow for studying insulin glycation mechanisms</li>
+                                <li>Characterized glycation-modified insulin glargine by top-down mass spectrometry</li>
+                                <li>Optimized expression and refolding systems, achieving significant yield improvements</li>
                             </ul>
                         </div>
-                       <div class="project">
+
+                        <div class="project">
                             <h5>SARS-CoV-2 Main Protease Inhibitor Discovery</h5>
-                            <p>Contributed to the discovery of multi-target-directed ligands against SARS-CoV-2 main protease through computational screening and structural analysis, published during the COVID-19 pandemic.</p>
+                            <p>Contributed to the computational discovery of multi-target-directed ligands against host-specific SARS-CoV-2 main protease through structural analysis and molecular docking, contributing to an early-pandemic publication.</p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+
+                <div class="timeline-item reveal">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Project Assistant II (2013-2017)</h3>
+                        <h3>Project Assistant II (2013–2017)</h3>
                         <h4>CSIR-National Chemical Laboratory, Pune</h4>
                         <div class="project">
                             <h5>Santalene Synthase Structural Characterization</h5>
-                            <p>Executed cloning, mutations, expression, purification, crystallization, and biophysical characterization of Santalene synthase from Indian sandalwood. Gained extensive experience in protein crystallography and structural biology techniques.</p>
+                            <p>Developed end-to-end structural biology workflow for Santalene synthase from Indian sandalwood (<em>Santalum album</em>): cloning, site-directed mutagenesis, recombinant expression, multi-step chromatographic purification, and biophysical characterization. Conducted extensive crystallization screening using hanging-drop and sitting-drop vapor diffusion methods, including robotic crystallization platforms (Hamilton, Mosquito), and X-ray diffraction analysis. Contributed to a publication in <em>Scientific Reports</em>.</p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+
+                <div class="timeline-item reveal">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Junior Research Fellow (2010-2013)</h3>
+                        <h3>Junior Research Fellow (2010–2013)</h3>
                         <h4>IISER-Pune</h4>
                         <div class="project">
-                            <h5>HIV-1 Fusion Inhibitor and Antimicrobial Lipopeptides Development</h5>
-                            <p>Synthesized and characterized gamma and hybrid gamma peptides as HIV-1 fusion inhibitors. Investigated antimicrobial activity of self-assembling short hybrid gamma lipopeptides, resulting in publication in <em>Journal of Medicinal Chemistry</em>.</p>
+                            <h5>HIV-1 Fusion Inhibitors and Antimicrobial Lipopeptides</h5>
+                            <p>Synthesized and structurally characterized gamma and hybrid gamma peptides designed as HIV-1 fusion inhibitors. Investigated the self-assembly behavior and broad-spectrum antimicrobial properties of short hybrid E-vinylogous lipopeptides, resulting in a first-author publication in the <em>Journal of Medicinal Chemistry</em>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Project Trainee (2009–2010)</h3>
+                        <h4>National Institute of Immunology (NII), New Delhi</h4>
+                        <div class="project">
+                            <h5>Mycobacterium tuberculosis Histidine Biosynthesis Proteins</h5>
+                            <p>Cloned, expressed, and purified HisA, HisB, and HisC2 proteins involved in the histidine biosynthesis pathway of <em>Mycobacterium tuberculosis</em>. Conducted preliminary crystallization screening to obtain diffraction-quality crystals for structural characterization.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="research-philosophy">
-                <h3>Research Philosophy & Future Directions</h3>
-                <p>My research integrates experimental and computational approaches from protein expression, purification, and proteomics to AlphaFold2, molecular dynamics, and inverse folding. This combination has enabled me to solve difficult problems like transforming insoluble proteins into functional variants and inventing a patented therapeutic.</p>
-                
-                <p>I seek postdoctoral opportunities at the intersection of <strong>protein design</strong>, <strong>protein engineering</strong>, <strong>proteomics</strong> and <strong>therapeutic development</strong> particularly leveraging computational structure prediction, and proteomics method development to understand protein dynamics and design proteins with enhanced biomedical applications.</p>
+            <div class="research-philosophy reveal">
+                <h3>Research Philosophy &amp; Future Directions</h3>
+                <p>My scientific philosophy centers on the idea that deep structural understanding of a protein is the prerequisite for engineering it. Across every stage of my career — from crystallization screening at NII and structural characterization at CSIR-NCL, to de novo computational design and mass spectrometric dissection of protein modifications — I have worked to integrate structure, function, and design into a unified experimental framework.</p>
+                <p>Looking ahead, I am eager to apply this integrated approach at the frontier of <strong>protein design</strong> and <strong>protein engineering</strong>, particularly in contexts where structural biology and mass spectrometry proteomics work in concert: mapping interaction interfaces with XL-MS to guide computational redesign, using DIA/SWATH workflows to interrogate modified proteoforms, and leveraging inverse folding to rationally engineer proteins with improved biophysical properties and therapeutic potential.</p>
             </div>
         </div>
     </section>
 
-    <!-- Publications Section -->
+    <!-- ===== PUBLICATIONS ===== -->
     <section id="publications" class="section">
         <div class="container">
-            <h2 class="section-title">Publications & Patents</h2>
-            
-            <div class="publications-content">
-                <div class="pub-category">
-                    <h3>Patents</h3>
-                    <div class="publication-item patent">
-                        <div class="pub-year">2024</div>
-                        <div class="pub-details">
-                            <h4>A glycation resistant insulin polypeptide and a method of preparing the same thereof</h4>
-                            <p class="authors"><strong>Shankar, S.S.*</strong>, Kulkarni, M.J., Banarjee, R., Jathar, S., Rajesh, S.</p>
-                            <p class="journal">WO 2024/194897 A1. Issued Sep 26, 2024</p>
-                        </div>
+            <h2 class="section-title reveal">Publications &amp; Patents</h2>
+
+            <div class="pub-category reveal">
+                <h3>Patent</h3>
+                <div class="publication-item patent">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-details">
+                        <h4>A glycation resistant insulin polypeptide and a method of preparing the same thereof</h4>
+                        <p class="authors"><strong>Shankar, S.S.*</strong>, Kulkarni, M.J., Banarjee, R., Jathar, S., Rajesh, S.</p>
+                        <p class="journal">WO 2024/194897 A1 · Issued Sep 26, 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-category reveal">
+                <h3>Peer-Reviewed Journal Articles</h3>
+                <p class="note">* First author and Co-corresponding author</p>
+
+                <div class="publication-item">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-details">
+                        <h4>A simple freeze-thaw based method for efficient purification of recombinant human proinsulin from inclusion bodies</h4>
+                        <p class="authors">Rajesh, S., Jathar, S., Banarjee, R., Sharma, M., Palkar, S., <strong>Shankar, S.S.*</strong>, &amp; Kulkarni, M.J.</p>
+                        <p class="journal"><em>Protein Expression and Purification</em>, 227: 106645</p>
+                        <a href="https://doi.org/10.1016/j.pep.2024.106645" class="pub-link" target="_blank" rel="noopener">DOI ↗</a>
                     </div>
                 </div>
 
-                <div class="pub-category">
-                    <h3>Peer-Reviewed Journal Articles</h3>
-                    <p class="note">*First author and Co-corresponding author</p>
-                    
-                    <div class="publication-item">
-                        <div class="pub-year">2025</div>
-                        <div class="pub-details">
-                            <h4>A simple freeze-thaw based method for efficient purification of recombinant human proinsulin from inclusion bodies</h4>
-                            <p class="authors">Rajesh, S., Jathar, S., Banarjee, R., Sharma, M., Palkar, S., <strong>Shankar, S.S.*</strong>, & Kulkarni, M.J.</p>
-                            <p class="journal"><em>Protein Expression and Purification</em>, 227: 106645</p>
-                            <a href="https://doi.org/10.1016/j.pep.2024.106645" class="pub-link" target="_blank" rel="noopener noreferrer">DOI</a>
-                        </div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="pub-year">2023</div>
-                        <div class="pub-details">
-                            <h4>De novo Structure Prediction of Meteorin and Meteorin-Like Protein for Identification of Domains, Functional Receptor Binding Regions, and Their High-Risk Missense Variants</h4>
-                            <p class="authors"><strong>Shankar, S.S.*</strong>, Banarjee, R., Jathar, S.M., Rajesh, S., Ramasamy, S., & Kulkarni, M.J.</p>
-                            <p class="journal"><em>Journal of Biomolecular Structure and Dynamics</em>, 42(9): 4522-4536</p>
-                            <a href="https://doi.org/10.1080/07391102.2023.2220804" class="pub-link" target="_blank" rel="noopener noreferrer">DOI</a>
-                        </div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="pub-year">2023</div>
-                        <div class="pub-details">
-                            <h4>Mechanistic insights on anserine hydrolyzing activities of human carnosinases</h4>
-                            <p class="authors">Pandya, V.K., <strong>Shankar, S.S.</strong>, Sonwane, B.P., Rajesh, S., Rathore, R., et al.</p>
-                            <p class="journal"><em>Biochimica et Biophysica Acta (BBA)-General Subjects</em>, 1867(3): 130290</p>
-                            <a href="https://doi.org/10.1016/j.bbagen.2022.130290" class="pub-link" target="_blank" rel="noopener noreferrer">DOI</a>
-                        </div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="pub-year">2021</div>
-                        <div class="pub-details">
-                            <h4>Discovery of potential multi-target-directed ligands by targeting host-specific SARS-CoV-2 structurally conserved main protease</h4>
-                            <p class="authors">Joshi, R.S., Jagdale, S.S., Bansode, S.B., <strong>Shankar, S.S.</strong>, et al.</p>
-                            <p class="journal"><em>Journal of Biomolecular Structure and Dynamics</em>, 39(9): 3099-3114</p>
-                            <a href="https://doi.org/10.1080/07391102.2020.1760137" class="pub-link" target="_blank" rel="noopener noreferrer">DOI</a>
-                        </div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="pub-year">2015</div>
-                        <div class="pub-details">
-                            <h4>Functional Characterization of Novel Sesquiterpene Synthases from Indian Sandalwood, Santalum album</h4>
-                            <p class="authors">Srivastava, P.L., Daramwar, P.P., Krithika, R., Pandreka, A., <strong>Shankar, S.S.</strong>, & Thulasiram, H.V.</p>
-                            <p class="journal"><em>Scientific Reports</em>, 5: 10095</p>
-                            <a href="https://doi.org/10.1038/srep10095" class="pub-link" target="_blank" rel="noopener noreferrer">DOI</a>
-                        </div>
-                    </div>
-
-                    <div class="publication-item">
-                        <div class="pub-year">2013</div>
-                        <div class="pub-details">
-                            <h4>Self-Assembly to Function: Design, Synthesis, and Broad-Spectrum Antimicrobial Properties of Short Hybrid E-Vinylogous Lipopeptides</h4>
-                            <p class="authors"><strong>Shankar, S.S.*</strong>, Benke, S.N., Nagendra, N., Srivastava, P.L., Thulasiram, H.V., & Gopi, H.N.</p>
-                            <p class="journal"><em>Journal of Medicinal Chemistry</em>, 56(21): 8468-8474</p>
-                            <a href="https://doi.org/10.1021/jm400884w" class="pub-link" target="_blank" rel="noopener noreferrer">DOI</a>
-                        </div>
+                <div class="publication-item">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-details">
+                        <h4>De novo Structure Prediction of Meteorin and Meteorin-Like Protein for Identification of Domains, Functional Receptor Binding Regions, and Their High-Risk Missense Variants</h4>
+                        <p class="authors"><strong>Shankar, S.S.*</strong>, Banarjee, R., Jathar, S.M., Rajesh, S., Ramasamy, S., &amp; Kulkarni, M.J.</p>
+                        <p class="journal"><em>Journal of Biomolecular Structure and Dynamics</em>, 42(9): 4522–4536</p>
+                        <a href="https://doi.org/10.1080/07391102.2023.2220804" class="pub-link" target="_blank" rel="noopener">DOI ↗</a>
                     </div>
                 </div>
 
-                <div class="pub-category">
-                    <h3>Manuscripts in Preparation</h3>
-                    <div class="publication-item manuscript">
-                        <div class="pub-details">
-                            <h4>Inverse Folding Design Enables Soluble Expression and Functional Activity of Mouse Meteorin-Like Protein</h4>
-                            <p class="authors"><strong>Shankar, S.S.*</strong>, Jathar, S., Sharma, M., Dole, A., Rajesh, S., Banarjee, R., Kulkarni, M.J.</p>
-                            <p class="status">In preparation</p>
-                        </div>
+                <div class="publication-item">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-details">
+                        <h4>Mechanistic insights on anserine hydrolyzing activities of human carnosinases</h4>
+                        <p class="authors">Pandya, V.K., <strong>Shankar, S.S.</strong>, Sonwane, B.P., Rajesh, S., Rathore, R., et al.</p>
+                        <p class="journal"><em>Biochimica et Biophysica Acta (BBA)-General Subjects</em>, 1867(3): 130290</p>
+                        <a href="https://doi.org/10.1016/j.bbagen.2022.130290" class="pub-link" target="_blank" rel="noopener">DOI ↗</a>
                     </div>
-                    <div class="publication-item manuscript">
-                        <div class="pub-details">
-                            <h4>Characterization of Glycation-Modified Insulin Glargine by Top-Down Mass Spectrometry</h4>
-                            <p class="authors">Jathar, S., Dole, A., Rajesh, S., <strong>Shankar, S.S.*</strong>, Kulkarni, M.J.</p>
-                            <p class="status">In preparation</p>
-                        </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-year">2021</div>
+                    <div class="pub-details">
+                        <h4>Discovery of potential multi-target-directed ligands by targeting host-specific SARS-CoV-2 structurally conserved main protease</h4>
+                        <p class="authors">Joshi, R.S., Jagdale, S.S., Bansode, S.B., <strong>Shankar, S.S.</strong>, et al.</p>
+                        <p class="journal"><em>Journal of Biomolecular Structure and Dynamics</em>, 39(9): 3099–3114</p>
+                        <a href="https://doi.org/10.1080/07391102.2020.1760137" class="pub-link" target="_blank" rel="noopener">DOI ↗</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-year">2015</div>
+                    <div class="pub-details">
+                        <h4>Functional Characterization of Novel Sesquiterpene Synthases from Indian Sandalwood, Santalum album</h4>
+                        <p class="authors">Srivastava, P.L., Daramwar, P.P., Krithika, R., Pandreka, A., <strong>Shankar, S.S.</strong>, &amp; Thulasiram, H.V.</p>
+                        <p class="journal"><em>Scientific Reports</em>, 5: 10095</p>
+                        <a href="https://doi.org/10.1038/srep10095" class="pub-link" target="_blank" rel="noopener">DOI ↗</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="pub-year">2013</div>
+                    <div class="pub-details">
+                        <h4>Self-Assembly to Function: Design, Synthesis, and Broad-Spectrum Antimicrobial Properties of Short Hybrid E-Vinylogous Lipopeptides</h4>
+                        <p class="authors"><strong>Shankar, S.S.*</strong>, Benke, S.N., Nagendra, N., Srivastava, P.L., Thulasiram, H.V., &amp; Gopi, H.N.</p>
+                        <p class="journal"><em>Journal of Medicinal Chemistry</em>, 56(21): 8468–8474</p>
+                        <a href="https://doi.org/10.1021/jm400884w" class="pub-link" target="_blank" rel="noopener">DOI ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pub-category reveal">
+                <h3>Manuscripts in Preparation</h3>
+                <div class="publication-item manuscript">
+                    <div class="pub-details">
+                        <h4>Inverse Folding Design Enables Soluble Expression and Functional Activity of Mouse Meteorin-Like Protein</h4>
+                        <p class="authors"><strong>Shankar, S.S.*</strong>, Jathar, S., Sharma, M., Dole, A., Rajesh, S., Banarjee, R., Kulkarni, M.J.</p>
+                        <p class="status">In preparation</p>
+                    </div>
+                </div>
+                <div class="publication-item manuscript">
+                    <div class="pub-details">
+                        <h4>Characterization of Glycation-Modified Insulin Glargine by Top-Down Mass Spectrometry</h4>
+                        <p class="authors">Jathar, S., Dole, A., Rajesh, S., <strong>Shankar, S.S.*</strong>, Kulkarni, M.J.</p>
+                        <p class="status">In preparation</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-light">
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            
+            <h2 class="section-title reveal">Technical Skills</h2>
+
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Molecular Biology</h3>
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-dna"></i> Molecular Biology</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag highlight">Molecular Cloning</span>
+                        <span class="skill-tag hi">Molecular Cloning</span>
                         <span class="skill-tag">Site-Directed Mutagenesis</span>
-                        <span class="skill-tag highlight">Protein Expression (E. coli)</span>
+                        <span class="skill-tag hi">Protein Expression (E. coli)</span>
                         <span class="skill-tag">Mammalian Expression</span>
                         <span class="skill-tag">CRISPR Knockout</span>
                         <span class="skill-tag">Cell-Based Assays</span>
+                        <span class="skill-tag">Immunofluorescence</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Proteomics & Mass Spectrometry</h3>
+                <div class="skill-category reveal reveal-delay-1">
+                    <h3><i class="fas fa-chart-bar"></i> Proteomics &amp; Mass Spec</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag highlight">Cross-Linking MS (XL-MS)</span>
-                        <span class="skill-tag highlight">DIA/SWATH</span>
-                        <span class="skill-tag highlight">Targeted Proteomics (PRM)</span>
+                        <span class="skill-tag hi">Cross-Linking MS (XL-MS)</span>
+                        <span class="skill-tag hi">DIA/SWATH</span>
+                        <span class="skill-tag hi">Targeted Proteomics (PRM)</span>
                         <span class="skill-tag">Bottom-Up Proteomics</span>
                         <span class="skill-tag">Top-Down Proteomics</span>
                         <span class="skill-tag">PTM Enrichment</span>
@@ -310,23 +350,23 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Protein Engineering & Modeling</h3>
+                <div class="skill-category reveal reveal-delay-2">
+                    <h3><i class="fas fa-atom"></i> Protein Engineering &amp; Modeling</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag highlight">AlphaFold2/ColabFold</span>
-                        <span class="skill-tag highlight">ProteinMPNN (Inverse Folding)</span>
+                        <span class="skill-tag hi">AlphaFold2/ColabFold</span>
+                        <span class="skill-tag hi">ProteinMPNN (Inverse Folding)</span>
                         <span class="skill-tag">RoseTTAFold</span>
-                        <span class="skill-tag">Homology Modeling</span>
+                        <span class="skill-tag">Homology Modeling (Modeller)</span>
                         <span class="skill-tag">Molecular Docking</span>
-                        <span class="skill-tag">GROMACS (MD Simulations)</span>
+                        <span class="skill-tag">GROMACS (MD)</span>
                         <span class="skill-tag">Schrödinger Suite</span>
                         <span class="skill-tag">PyMOL</span>
                         <span class="skill-tag">ChimeraX</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Protein Purification</h3>
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-filter"></i> Protein Purification</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Affinity Chromatography</span>
                         <span class="skill-tag">Ion Exchange</span>
@@ -337,20 +377,22 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Biophysical Techniques</h3>
+                <div class="skill-category reveal reveal-delay-1">
+                    <h3><i class="fas fa-cube"></i> Structural Biology &amp; Biophysics</h3>
                     <div class="skill-tags">
+                        <span class="skill-tag hi">Protein Crystallization</span>
+                        <span class="skill-tag hi">X-ray Diffraction</span>
+                        <span class="skill-tag">Robotic Crystallization (Hamilton, Mosquito)</span>
                         <span class="skill-tag">Circular Dichroism (CD)</span>
                         <span class="skill-tag">SEC-MALS</span>
                         <span class="skill-tag">Dynamic Light Scattering</span>
                         <span class="skill-tag">ITC</span>
                         <span class="skill-tag">Atomic Force Microscopy</span>
-                        <span class="skill-tag">Fluorescence Spectroscopy</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Data Analysis & Programming</h3>
+                <div class="skill-category reveal reveal-delay-2">
+                    <h3><i class="fas fa-code"></i> Data Analysis &amp; Programming</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">R (Basic)</span>
                         <span class="skill-tag">Python (Basic)</span>
@@ -360,31 +402,29 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Biochemical Assays</h3>
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-vial"></i> Biochemical Assays</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Western Blotting</span>
                         <span class="skill-tag">ELISA</span>
                         <span class="skill-tag">Immunoprecipitation</span>
-                        <span class="skill-tag">Immunofluorescence</span>
                         <span class="skill-tag">Enzymatic Assays</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Crystallography</h3>
+                <div class="skill-category reveal reveal-delay-1">
+                    <h3><i class="fas fa-flask"></i> Cell Culture &amp; Cellular Biology</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Protein Crystallization</span>
-                        <span class="skill-tag">Hanging Drop</span>
-                        <span class="skill-tag">Sitting Drop</span>
-                        <span class="skill-tag">Robotic Systems</span>
-                        <span class="skill-tag">X-ray Diffraction</span>
+                        <span class="skill-tag">Mammalian Cell Culture</span>
+                        <span class="skill-tag">CRISPR-Based Knockout Generation</span>
+                        <span class="skill-tag">Immunofluorescence</span>
+                        <span class="skill-tag">Cell-Based Assays</span>
                     </div>
                 </div>
             </div>
 
-            <div class="awards-section">
-                <h3>Awards & Recognition</h3>
+            <div class="awards-section reveal">
+                <h3>Awards &amp; Recognition</h3>
                 <div class="awards-list">
                     <div class="award-item">
                         <div class="award-year">2023</div>
@@ -426,52 +466,38 @@
         </div>
     </section>
 
-    <!-- Teaching Section -->
+    <!-- ===== TEACHING ===== -->
     <section id="teaching" class="section">
         <div class="container">
-            <h2 class="section-title">Teaching & Mentorship</h2>
+            <h2 class="section-title reveal">Teaching, Mentorship &amp; Training</h2>
 
-            <!-- Stats row -->
             <div class="mentorship-stats">
-                <div class="stat-box">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Courses Instructed</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">8</div>
-                    <div class="stat-label">Project Students Mentored</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Ph.D. Students Trained</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Journals Reviewed</div>
-                </div>
+                <div class="stat-box reveal"><div class="stat-number">2</div><div class="stat-label">Courses Instructed</div></div>
+                <div class="stat-box reveal reveal-delay-1"><div class="stat-number">8</div><div class="stat-label">Project Students Mentored</div></div>
+                <div class="stat-box reveal reveal-delay-2"><div class="stat-number">4</div><div class="stat-label">Ph.D. Students Trained</div></div>
+                <div class="stat-box reveal reveal-delay-3"><div class="stat-number">2</div><div class="stat-label">Journals Reviewed</div></div>
             </div>
 
-            <!-- Teaching cards -->
             <div class="teaching-grid">
-                <div class="teaching-card">
+                <div class="teaching-card reveal">
                     <h3>Targeted Proteomics Workshop</h3>
                     <p class="institution">CSIR Integrated Skill Initiative, 2022</p>
                     <ul>
                         <li>Designed and delivered curriculum on targeted proteomics workflows (PRM)</li>
-                        <li>Covered assay development, and data analysis using Skyline</li>
+                        <li>Covered assay development and data analysis using Skyline</li>
                         <li>Trained participants from national research institutes</li>
                     </ul>
                 </div>
-                <div class="teaching-card">
+                <div class="teaching-card reveal reveal-delay-1">
                     <h3>Basic to Advanced Proteomics Course</h3>
                     <p class="institution">CSIR Integrated Skill Initiative, 2021</p>
                     <ul>
                         <li>Led hands-on sessions from sample preparation to data interpretation</li>
-                        <li>Covered DDA, DIA strategies</li>
-                        <li>Introduced participants to MaxQuant and FragPipe data analysis pipelines</li>
+                        <li>Covered DDA and DIA/SWATH strategies</li>
+                        <li>Introduced participants to MaxQuant and FragPipe pipelines</li>
                     </ul>
                 </div>
-                <div class="teaching-card">
+                <div class="teaching-card reveal reveal-delay-2">
                     <h3>Student Mentorship</h3>
                     <p class="institution">CSIR-National Chemical Laboratory, 2017–2025</p>
                     <ul>
@@ -482,42 +508,51 @@
                 </div>
             </div>
 
-            <!-- Peer review -->
-            <div class="peer-review-box">
-                <h3>Scientific Peer Review</h3>
-                <p>Ad-hoc reviewer for <strong>Analytical Biochemistry</strong> and <strong>Protein Expression and Purification</strong> contributing to quality control and advancement of scientific literature in the proteomics field.</p>
+            <div class="peer-review-box reveal">
+                <h3><i class="fas fa-pen-nib"></i> Scientific Peer Review</h3>
+                <p>Ad-hoc reviewer for <strong>Analytical Biochemistry</strong> and <strong>Protein Expression and Purification</strong>.</p>
+            </div>
+                </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title reveal">Get In Touch</h2>
+            <div class="contact-centered reveal">
+                <h3 class="contact-heading">Interested in collaborating?</h3>
+                <p class="contact-description">I'm always open to discussing postdoctoral opportunities, research collaborations, or projects in proteomics, protein engineering, and therapeutic development.</p>
+
+                <p class="references-note"><i class="fas fa-user-check"></i> References available upon request.</p>
+
+                <a href="/cdn-cgi/l/email-protection#a2c0cbcd8cd1cac3ccc9c3d0e2c5cfc3cbce8cc1cdcf" class="btn btn-primary btn-email">
+                    <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="2d4f4442035e454c43464c5f6d4a404c4441034e4240">[email&#160;protected]</span>
+                </a>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/shiva-shankar-s-sss" target="_blank" rel="noopener" class="social-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <span class="social-divider">|</span>
+                    <a href="https://orcid.org/0000-0002-7289-0896" target="_blank" rel="noopener" class="social-link">
+                        <i class="fab fa-orcid"></i> ORCID
+                    </a>
+                    <span class="social-divider">|</span>
+                    <a href="https://scholar.google.com/citations?user=shiva-shankar" target="_blank" rel="noopener" class="social-link">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-text">
-                    <h3>Interested in collaboration?</h3>
-                    <p>I'm actively seeking postdoctoral opportunities in protein design, protein engineering, and therapeutic development. I'm particularly interested in positions that leverage innovative protein design approaches and structural-functional analysis.</p>
-                    <p>Feel free to reach out to discuss research collaborations, postdoctoral opportunities, or potential projects.</p>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h4>Email</h4>
-                        <p><a href="mailto:bio.shankar@gmail.com">bio.shankar@gmail.com</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Phone</h4>
-                        <p>+1 410-419-4603 (US)</p>
-                        <p>+91 9975499187 (India)</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Location</h4>
-                        <p>Baltimore, MD, USA</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Connect</h4>
-                        <p>
-                            <a href="https://www.linkedin.com/in/shiva-shankar-s-sss" target="_blank">LinkedIn</a> | 
-                            <a href="https://orcid.org/0000-0002-7289-0896" target="_blank">ORCID</a> | 
-                            <a href="https://scholar.google.com/citations?user=Hc8KOpAAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                  
+    <!-- Scroll to top -->
+    <button id="scrollTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <footer>
+        <p>© 2026 Shiva Shankar S., Ph.D. · Baltimore, MD, USA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
